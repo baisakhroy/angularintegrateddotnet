@@ -1,0 +1,26 @@
+<form class="form">
+    <div class="form-group">
+        <label for="id">ID</label>
+        <input #inputid type="number" class="form-control" id="id" placeholder="Enter id" name="id">
+    </div>
+    <div class="form-group">
+        <label for="GroupID">GroupID</label>
+        <input #inputgroupid type="number" class="form-control" id="GroupID" placeholder="Enter groupid" name="GroupID">
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input #inputname type="text" class="form-control" id="Name" placeholder="Enter name of the product" name="name">
+    </div>
+    <div class="form-group">
+            <label for="description">Description</label>
+            <input #inputdesc type="text" class="form-control" id="description" placeholder="Enter description" name="description">
+    </div>
+    <div class="form-group">
+            <label for="rate">Rate</label>
+            <input #inputrate type="number" class="form-control" id="rate" placeholder="Enter of the productprice " name="rate">
+    </div>
+</form>
+
+<button class="btn btn-primary btn-large" [routerLinkActive]="['link-active']" [routerLink]="['/httppost']" (click)='post(inputid.value,inputgroupid.value,inputname.value,inputdesc.value,inputrate.value)' >POST</button>
+
+<!-- <button class="btn btn-primary btn-large" [routerLinkActive]="['link-active']" [routerLink]="['/httppost']" >POST</button> -->
