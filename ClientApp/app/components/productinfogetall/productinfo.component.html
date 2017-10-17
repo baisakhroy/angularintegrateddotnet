@@ -1,6 +1,6 @@
 <h1>PRODUCT INFO</h1>
 
-<p>This component demonstrates PRODUCT INFORMATION fetched from  my own data base.</p>
+<p>This component demonstrates PRODUCT info  fetched from  my own data base.</p>
 
 <p *ngIf="!productinfos"><em>Loading...</em></p>
 
@@ -11,8 +11,8 @@
             <th>GroupID</th>
             <th>Name</th>
             <th>Description</th>
-            <th>Ratttt</th>
-            <th> # </th>
+            <th>Rateee</th>
+            <th>  </th>
         </tr> 
     </thead>
     <tbody>
@@ -22,9 +22,10 @@
             <td>{{ productinfo.name }}</td>
             <td>{{ productinfo.description }}</td>
             <td>{{ productinfo.rate }}</td>
-            <td><button class="btn btn-primary">DELETE</button></td>
+            <td><button class="btn btn-danger" [routerLinkActive]="['link-active']" [routerLink]="['/delete']"(click)="delete(productinfo.id)">DELETE</button></td>
         </tr>
     </tbody>
 </table>
 
 <button class="btn btn-primary" [routerLinkActive]="['link-active']" [routerLink]="['/postform']"> Post new data </button>
+

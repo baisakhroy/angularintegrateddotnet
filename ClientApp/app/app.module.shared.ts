@@ -1,3 +1,5 @@
+import { DeleteService } from './components/delete/delete.service';
+import { DeleteComponent } from './components/delete/delete.component';
 import { HttppostComponent } from './components/httppost/httppost.component';
 
 import { PostformComponent } from './components/postform/postform.component';
@@ -25,9 +27,11 @@ import { CounterComponent } from './components/counter/counter.component';
         HomeComponent,
         ProductinfoComponent,
         PostformComponent,
-        HttppostComponent
+        HttppostComponent,
+        DeleteComponent
         
     ],
+    providers: [DeleteService],
     imports: [
         CommonModule,
         HttpModule,
@@ -40,6 +44,7 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'productinfo', component: ProductinfoComponent },
             { path: 'postform', component: PostformComponent },
             { path: 'httppost', component: HttppostComponent },
+            { path: 'delete', component: DeleteComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]
